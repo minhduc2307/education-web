@@ -1,0 +1,87 @@
+@use "../abstracts";
+
+.footer {
+    padding-top: 69px;
+    background: #f5f5f5;
+
+    &__inner {
+        padding: 50px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr 1.2fr 1.2fr 1fr;
+        gap: 60px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__desc {
+        margin-top: 22px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__form {
+        margin-top: 17px;
+
+        &-group {
+            display: flex;
+            gap: 12px;
+            height: 46px;
+        }
+
+        &-input {
+            width: 100%;
+            height: 100%;
+            padding: 0 13px;
+            border-radius: 6px;
+            background: #fff;
+            font-size: 1.3rem;
+
+            &::placeholder {
+                line-height: 150%;
+                color: #010101;
+            }
+        }
+
+        &-btn {
+            --btn-width: 90px;
+            --btn-height: 46px;
+            border-radius: 6px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 150%;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 128.571%;
+        color: #010101;
+    }
+
+    &__list {
+        margin-top: 18px;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 150%;
+        padding: 9px 0;
+        white-space: nowrap;
+
+        &:hover {
+            color: #0071dc;
+        }
+    }
+}

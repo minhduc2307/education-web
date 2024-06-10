@@ -1,0 +1,99 @@
+@use "../abstracts";
+
+.header {
+    padding: 20px 0;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+
+    &__more {
+        @include abstracts.screen(lg) {
+            margin-right: 40px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-right: 24px;
+        }
+    }
+}
+
+.navbar {
+    margin-left: 133px;
+
+    transition: transform, opacity;
+    transition-duration: 0.2s;
+
+    @include abstracts.screen(lg) {
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 10;
+        margin-left: 0;
+        padding: 40px 0;
+        background: #fff;
+        border-radius: 0 20px 20px 0;
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    &.show {
+        transform: translateX(0);
+        opacity: 1;
+        box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+
+        & + .navbar__overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 9;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility, opacity;
+        transition-duration: 0.5s;
+    }
+
+    &__list {
+        display: flex;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 8px 22px;
+
+        @include abstracts.screen(lg) {
+            padding: 10px 30px;
+        }
+
+        &--active {
+            color: var(--black-text-color);
+        }
+
+        &:hover {
+            color: var(--black-text-color);
+            text-decoration: underline;
+        }
+    }
+}
+
+.top-bar__cta-group {
+    margin-left: auto;
+    display: flex;
+    gap: 4px;
+
+    &-btn {
+        min-width: 100px;
+    }
+}

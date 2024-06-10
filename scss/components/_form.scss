@@ -1,0 +1,16 @@
+$error-color: #ed4337;
+
+.form {
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) &__error {
+        display: block;
+    }
+
+    &__error {
+        display: none;
+        margin-top: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $error-color;
+        text-align: left;
+    }
+}

@@ -1,0 +1,40 @@
+.btn {
+    --btn-width: 126px;
+    --btn-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    height: var(--btn-height);
+    padding: 0 20px;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    white-space: nowrap;
+    user-select: none;
+
+    &--primary {
+        min-width: var(--btn-width);
+        background: #0166ff;
+        color: #fff;
+    }
+
+    &--text {
+        color: #010101;
+    }
+
+    &--rounded {
+        border-radius: 999px;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #0166ff;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        opacity: 0/9;
+    }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts";
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        color: var(--black-text-color);
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+}
