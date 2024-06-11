@@ -207,6 +207,11 @@ textarea {
   font-weight: 600;
   color: #010101;
 }
+@media (max-width: 767.98px) {
+  .section__heading {
+    font-size: 3rem;
+  }
+}
 
 .section__desc {
   margin-top: 20px;
@@ -1539,6 +1544,9 @@ textarea {
   }
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ed4337;
 }
@@ -1556,7 +1564,7 @@ textarea {
 }
 @media (max-width: 767.98px) {
   .form__group {
-    margin-top: 26px;
+    margin-top: 24px;
   }
 }
 .form__group--inline {
@@ -1643,10 +1651,14 @@ textarea {
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   padding: 20px 0;
 }
 
 .top-bar {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
 }
@@ -1659,6 +1671,23 @@ textarea {
   .top-bar__more {
     margin-right: 24px;
   }
+}
+@media (max-width: 767.98px) {
+  .top-bar__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+}
+.top-bar__cta-group {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+.top-bar__cta-group-btn {
+  min-width: 90px;
+  padding: 0 10px;
 }
 
 .navbar {
@@ -1739,21 +1768,22 @@ textarea {
   text-decoration: underline;
 }
 
-.top-bar__cta-group {
-  margin-left: auto;
-  display: flex;
-  gap: 4px;
-}
-.top-bar__cta-group-btn {
-  min-width: 100px;
-}
-
 .footer {
   padding-top: 69px;
   background: #f5f5f5;
 }
 .footer__inner {
   padding: 50px;
+}
+@media (max-width: 991.98px) {
+  .footer__inner {
+    padding: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__inner {
+    padding: 20px;
+  }
 }
 .footer__row {
   display: grid;
@@ -1797,7 +1827,7 @@ textarea {
   color: #010101;
 }
 .footer__form-btn {
-  --btn-width: 90px;
+  --btn-width: 84px;
   --btn-height: 46px;
   border-radius: 6px;
   font-size: 1.3rem;
@@ -1826,6 +1856,16 @@ textarea {
 
 .hero {
   margin-top: 80px;
+}
+@media (max-width: 1199.98px) {
+  .hero {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    margin-top: 30px;
+  }
 }
 .hero__row {
   display: flex;
@@ -1864,6 +1904,11 @@ textarea {
   font-size: 7rem;
   font-weight: 700;
   width: min(489px, 100%);
+}
+@media (max-width: 767.98px) {
+  .hero__heading {
+    font-size: 4.6rem;
+  }
 }
 .hero__heading-strong {
   background: linear-gradient(269deg, #a6cf4a 16.43%, #ffd05a 37.58%, #fd60a9 54.54%);
@@ -2505,6 +2550,11 @@ textarea {
   align-items: center;
   margin-top: 66px;
 }
+@media (max-width: 767.98px) {
+  .people-item__info {
+    margin-top: 30px;
+  }
+}
 .people-item__name {
   font-size: 2rem;
   font-weight: 600;
@@ -2588,7 +2638,7 @@ textarea {
 }
 @media (max-width: 991.98px) {
   .contact {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 .contact__inner {
@@ -2721,6 +2771,11 @@ textarea {
   margin: 30px;
 }
 @media (max-width: 767.98px) {
+  .auth__logo {
+    margin: 20px 30px 20px;
+  }
+}
+@media (max-width: 767.98px) {
   .auth__content {
     position: fixed;
     inset: 0;
@@ -2771,6 +2826,11 @@ textarea {
   white-space: nowrap;
   user-select: none;
 }
+@media (max-width: 767.98px) {
+  .auth__login-google-btn {
+    margin-top: 24px;
+  }
+}
 .auth__login-google-btn span {
   font-size: 1.6rem;
   font-weight: 500;
@@ -2782,12 +2842,11 @@ textarea {
   align-items: center;
   gap: 12px;
   width: 100%;
-  margin-top: 30px;
   margin: 30px 0 46px;
 }
 @media (max-width: 767.98px) {
   .auth__separate {
-    margin: 30px 0 0;
+    margin: 16px 0 0;
   }
 }
 .auth__separate-line {
@@ -2813,19 +2872,12 @@ textarea {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100%;
   background: #fafafd;
 }
 .auth__intro-img {
   display: block;
   width: min(424px, 100%);
   object-fit: contain;
-}
-@media (max-width: 767.98px) {
-  .auth__intro-img {
-    width: 80%;
-    margin: 0 auto;
-  }
 }
 .auth__intro-next-btn {
   position: absolute;
@@ -2847,10 +2899,12 @@ textarea {
   line-height: 171.429%;
   color: #777e90;
 }
-.auth__text-link {
-  color: #010101;
+@media (max-width: 767.98px) {
+  .auth__text {
+    margin-top: 24px;
+  }
 }
-.auth__text-link--navigation {
+.auth__text-link {
   color: #0166ff;
 }
 .auth__message {

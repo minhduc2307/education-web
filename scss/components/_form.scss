@@ -3,6 +3,11 @@
 $error-color: #ed4337;
 
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        // pointer-events: none;
+    }
+
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
         .form__text-input {
             border-color: #ed4337;
@@ -25,7 +30,7 @@ $error-color: #ed4337;
         margin-top: 36px;
 
         @include abstracts.screen(md) {
-            margin-top: 26px;
+            margin-top: 24px;
         }
 
         &--inline {

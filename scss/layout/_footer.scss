@@ -6,6 +6,14 @@
 
     &__inner {
         padding: 50px;
+
+        @include abstracts.screen(lg) {
+            padding: 24px;
+        }
+
+        @include abstracts.screen(md) {
+            padding: 20px;
+        }
     }
 
     &__row {
@@ -53,7 +61,7 @@
         }
 
         &-btn {
-            --btn-width: 90px;
+            --btn-width: 84px;
             --btn-height: 46px;
             border-radius: 6px;
             font-size: 1.3rem;

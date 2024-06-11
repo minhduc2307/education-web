@@ -3,6 +3,14 @@
 .hero {
     margin-top: 80px;
 
+    @include abstracts.screen(xl) {
+        margin-top: 60px;
+    }
+
+    @include abstracts.screen(md) {
+        margin-top: 30px;
+    }
+
     &__row {
         display: flex;
         align-items: center;
@@ -44,6 +52,10 @@
         font-size: 7rem;
         font-weight: 700;
         width: min(489px, 100%);
+
+        @include abstracts.screen(md) {
+            font-size: 4.6rem;
+        }
 
         &-strong {
             background: linear-gradient(269deg, #a6cf4a 16.43%, #ffd05a 37.58%, #fd60a9 54.54%);
@@ -778,6 +790,10 @@
             display: flex;
             align-items: center;
             margin-top: 66px;
+
+            @include abstracts.screen(md) {
+                margin-top: 30px;
+            }
         }
 
         &__name {
@@ -876,7 +892,7 @@
     background: #f8fbff;
 
     @include abstracts.screen(lg) {
-        margin-top: 20px;
+        margin-top: 0;
     }
 
     &__inner {

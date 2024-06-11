@@ -1,10 +1,14 @@
 @use "../abstracts";
 
 .header {
+    position: relative;
+    z-index: 2;
     padding: 20px 0;
 }
 
 .top-bar {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
 
@@ -15,6 +19,26 @@
 
         @include abstracts.screen(sm) {
             margin-right: 24px;
+        }
+    }
+
+    &__logo {
+        @include abstracts.screen(md) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+        }
+    }
+
+    &__cta-group {
+        margin-left: auto;
+        display: flex;
+        gap: 4px;
+
+        &-btn {
+            min-width: 90px;
+            padding: 0 10px;
         }
     }
 }
@@ -99,15 +123,5 @@
             color: var(--black-text-color);
             text-decoration: underline;
         }
-    }
-}
-
-.top-bar__cta-group {
-    margin-left: auto;
-    display: flex;
-    gap: 4px;
-
-    &-btn {
-        min-width: 100px;
     }
 }
