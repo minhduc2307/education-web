@@ -1,0 +1,13 @@
+.message {
+    width: 100%;
+    padding: 14px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 10px;
+
+    &--success {
+        border: 1px solid #5bc45f;
+        background: rgba(39, 243, 117, 0.2);
+    }
+}

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign in</title>
+        <title>Sign up</title>
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -38,11 +38,11 @@
                     <h1 class="logo__title">Eduka.</h1>
                 </a>
                 <div class="auth__content-inner">
-                    <h1 class="auth__heading">Sign In</h1>
-                    <p class="auth__desc">Welcome back! Please enter your details.</p>
+                    <h1 class="auth__heading">Sign Up</h1>
+                    <p class="auth__desc">Let’s create your account and start experiencing with us</p>
                     <button class="auth__login-google-btn">
                         <img src="./assets/img/auth/google.svg" alt="" />
-                        <span>Log in with Google</span>
+                        <span> Log in with Google</span>
                     </button>
 
                     <div class="auth__separate">
@@ -76,22 +76,36 @@
                             <p class="form__error">Password must be at least 6 characters</p>
                         </div>
 
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    type="password"
+                                    class="form__input"
+                                    required
+                                    minlength="6"
+                                    placeholder="Confirm password"
+                                />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Password do not match</p>
+                        </div>
+
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" class="form__checkbox-input d-none" />
                                 <span class="form__checkbox-label">Remember for 30 days</span>
                             </label>
-                            <a href="./forgot-password.html" class="auth__link">Forgot password</a>
                         </div>
 
                         <div class="form__group">
-                            <button class="btn btn--primary auth__form-btn">Sign in</button>
+                            <button class="btn btn--primary auth__form-btn">Sign up</button>
                         </div>
                     </form>
 
                     <p class="auth__text">
-                        Don't have an account?
-                        <a href="./sign-up.html" class="auth__text-link">Sign up for free</a>
+                        Already have an account?
+                        <a href="./sign-in.html" class="auth__text-link">Sign in</a>
                     </p>
                 </div>
             </div>

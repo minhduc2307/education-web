@@ -183,6 +183,7 @@ select {
   color: inherit;
   outline: none;
   border: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input,
@@ -1628,6 +1629,19 @@ textarea {
   margin-left: 24px;
 }
 
+.message {
+  width: 100%;
+  padding: 14px;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.message--success {
+  border: 1px solid #5bc45f;
+  background: rgba(39, 243, 117, 0.2);
+}
+
 .header {
   padding: 20px 0;
 }
@@ -2689,6 +2703,11 @@ textarea {
   flex-direction: row-reverse;
   height: 100vh;
 }
+@supports (-webkit-touch-callout: none) {
+  .auth {
+    height: -webkit-fill-available;
+  }
+}
 @media (max-width: 767.98px) {
   .auth {
     flex-direction: row;
@@ -2789,24 +2808,22 @@ textarea {
   width: 100%;
 }
 .auth__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100%;
-}
-@media (max-width: 767.98px) {
-  .auth__intro {
-    inset: 0;
-  }
+  background: #fafafd;
 }
 .auth__intro-img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: min(424px, 100%);
   object-fit: contain;
 }
 @media (max-width: 767.98px) {
   .auth__intro-img {
     width: 80%;
-    height: 80%;
     margin: 0 auto;
   }
 }
@@ -2832,6 +2849,12 @@ textarea {
 }
 .auth__text-link {
   color: #010101;
+}
+.auth__text-link--navigation {
+  color: #0166ff;
+}
+.auth__message {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
