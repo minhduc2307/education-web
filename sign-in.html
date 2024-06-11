@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign in</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <main class="auth">
+            <div class="auth__intro">
+                <img src="./assets/img/auth/auth-intro.png" alt="" class="auth__intro-img" />
+                <button class="auth__intro-next-btn d-none d-md-block">
+                    <img src="./assets/img/auth/arrow-next-btn.svg" alt="" />
+                </button>
+            </div>
+
+            <div id="auth-content" class="auth__content hide">
+                <!-- Logo -->
+                <a href="./index.html" class="logo auth__logo">
+                    <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                    <h1 class="logo__title">Eduka.</h1>
+                </a>
+                <div class="auth__content-inner">
+                    <h1 class="auth__heading">Welcome back, James</h1>
+                    <p class="auth__desc">Welcome back! Pleaase enter your details.</p>
+                    <button class="auth__login-google-btn">
+                        <img src="./assets/img/auth/google.svg" alt="" />
+                        <span> Log in with Google</span>
+                    </button>
+
+                    <div class="auth__separate">
+                        <div class="auth__separate-line"></div>
+                        <span class="auth__separate-text">or</span>
+                        <div class="auth__separate-line"></div>
+                    </div>
+
+                    <form action="./index.html" class="form auth__form">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="email" class="form__input" required placeholder="Email" />
+                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Email in not in correct format</p>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    type="password"
+                                    class="form__input"
+                                    required
+                                    minlength="6"
+                                    placeholder="Password"
+                                />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Password must be at least 6 characters</p>
+                        </div>
+
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" class="form__checkbox-input d-none" />
+                                <span class="form__checkbox-label">Remember for 30 days</span>
+                            </label>
+                            <a href="" class="auth__link">Forgot password</a>
+                        </div>
+
+                        <div class="form__group">
+                            <button class="btn btn--primary auth__form-btn">Sign in</button>
+                        </div>
+                    </form>
+
+                    <p class="auth__text">
+                        Don't have an account?
+                        <a href="" class="auth__text-link">Sign up for free</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

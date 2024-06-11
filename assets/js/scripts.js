@@ -90,6 +90,32 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
+// window.addEventListener("template-loaded", () => {
+//     const peopleList = document.querySelector(".people__list");
+//     const peopleItems = document.querySelectorAll(".people-item");
+//     const prevSliderButton = document.querySelector(".people__ctrl-btn--prev");
+//     const nextSliderButton = document.querySelector(".people__ctrl-btn--next");
+//     const peopleItemWidth = peopleItems[0].offsetWidth;
+//     const totalPeopleItems = peopleItems.length;
+//     let currentIndex = 0;
+
+//     const showItem = (itemList, currentIndex, itemWidth) => {
+//         itemList.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+//     };
+
+//     prevSliderButton.onclick = () => {
+//         currentIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : totalPeopleItems - 1;
+//         showItem(peopleList, currentIndex, peopleItemWidth);
+//     };
+
+//     nextSliderButton.onclick = () => {
+//         currentIndex = currentIndex + 1 < totalPeopleItems ? currentIndex + 1 : 0;
+//         showItem(peopleList, currentIndex, peopleItemWidth);
+//     };
+
+//     showItem(peopleList, currentIndex, peopleItemWidth);
+// });
+
 window.addEventListener("template-loaded", () => {
     const peopleList = document.querySelector(".people__list");
     const peopleItems = document.querySelectorAll(".people-item");
@@ -113,5 +139,33 @@ window.addEventListener("template-loaded", () => {
         showItem(peopleList, currentIndex, peopleItemWidth);
     };
 
+    const autoSlide = () => {
+        currentIndex = currentIndex + 1 < totalPeopleItems ? currentIndex + 1 : 0;
+        showItem(peopleList, currentIndex, peopleItemWidth);
+    };
+
+    // Bắt đầu tự động chuyển slide sau 4 giây
+    let autoSlideInterval = setInterval(autoSlide, 4000);
+
+    // Dừng tự động chuyển slide khi người dùng nhấp vào nút điều khiển
+    prevSliderButton.addEventListener("click", () => clearInterval(autoSlideInterval));
+    nextSliderButton.addEventListener("click", () => clearInterval(autoSlideInterval));
+
+    // Khởi tạo slide ban đầu
     showItem(peopleList, currentIndex, peopleItemWidth);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    const nextAuthContentBtn = $(".auth__intro-next-btn");
+    const authContent = $("#auth-content");
+
+    nextAuthContentBtn.addEventListener("click", () => {
+        if (authContent.classList.contains("hide")) {
+            authContent.classList.remove("hide");
+            authContent.classList.add("show");
+        } else {
+            authContent.classList.remove("show");
+            authContent.classList.add("hide");
+        }
+    });
 });

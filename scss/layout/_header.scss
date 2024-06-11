@@ -27,7 +27,7 @@
 
     @include abstracts.screen(lg) {
         position: fixed;
-        inset: 0 50% 0 0;
+        inset: 0 40% 0 0;
         z-index: 10;
         margin-left: 0;
         padding: 40px 0;
@@ -48,6 +48,19 @@
         }
     }
 
+    &__close-btn {
+        display: none;
+
+        @include abstracts.screen(lg) {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px 20px;
+            font-size: 3rem;
+        }
+    }
+
     &__overlay {
         position: fixed;
         inset: 0;
@@ -63,6 +76,7 @@
         display: flex;
 
         @include abstracts.screen(lg) {
+            margin-top: 20px;
             flex-direction: column;
             gap: 30px;
         }
