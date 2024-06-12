@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+
+        <main class="blog">
+            <div class="blog__bg">
+                <div class="blog__bg-decore">
+                    <img src="./assets/img/decore/decore-01.svg" alt="" />
+                    <img src="./assets/img/decore/decore-02.svg" alt="" />
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="blog__body">
+                    <h1 class="blog__heading">Blog</h1>
+                    <div class="blog__content">
+                        <div class="row">
+                            <div class="col-8 col-xl-12">
+                                <div class="blog-tab">
+                                    <div class="blog-tab__row">
+                                        <ul class="blog-tab__list">
+                                            <li class="blog-tab__item blog-tab__item--current">All</li>
+                                            <li class="blog-tab__item">Business</li>
+                                            <li class="blog-tab__item">Education</li>
+                                            <li class="blog-tab__item">Learning</li>
+                                            <li class="blog-tab__item">Design</li>
+                                        </ul>
+                                        <div class="blog-search">
+                                            <input
+                                                type="search"
+                                                name=""
+                                                id=""
+                                                placeholder="Search"
+                                                class="blog-search__input"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="blog-tab__contents">
+                                        <div class="blog-tab__content">
+                                            <div class="blog__list">
+                                                <!-- Blog item 1 -->
+                                                <article class="blog-item">
+                                                    <div class="blog-item__left">
+                                                        <h2 class="blog-item__title">
+                                                            The great challenge of global learning
+                                                        </h2>
+                                                        <p class="blog-item__desc">
+                                                            With worldwide course's training and development programs in
+                                                            different approaches to online marketing are becoming
+                                                            available.
+                                                        </p>
+                                                        <div class="blog-item__bottom">
+                                                            <span class="blog-item__date">26 Aug 2024</span>
+                                                            <span class="blog-item__time">5 mins read</span>
+                                                            <span class="blog-item__branch">Education</span>
+                                                        </div>
+                                                    </div>
+                                                    <img
+                                                        src="./assets/img/blog/item-1.png"
+                                                        alt=""
+                                                        class="blog-item__thumb"
+                                                    />
+                                                </article>
+
+                                                <div class="blog__separate"></div>
+
+                                                <!-- Blog item 2 -->
+                                                <article class="blog-item">
+                                                    <div class="blog-item__left">
+                                                        <h2 class="blog-item__title">
+                                                            How to building a career in data science
+                                                        </h2>
+                                                        <p class="blog-item__desc">
+                                                            Discover the essential skills and pathways to embark on a
+                                                            successful journey in the data science field, with
+                                                            comprehensive insights and expert guidance.
+                                                        </p>
+                                                        <div class="blog-item__bottom">
+                                                            <span class="blog-item__date">23 July 2024</span>
+                                                            <span class="blog-item__time">4 mins read</span>
+                                                            <span class="blog-item__branch">Design</span>
+                                                        </div>
+                                                    </div>
+                                                    <img
+                                                        src="./assets/img/blog/item-2.png"
+                                                        alt=""
+                                                        class="blog-item__thumb"
+                                                    />
+                                                </article>
+
+                                                <div class="blog__separate"></div>
+
+                                                <!-- Blog item 3 -->
+                                                <article class="blog-item">
+                                                    <div class="blog-item__left">
+                                                        <h2 class="blog-item__title">
+                                                            We highlighting strategies for student success
+                                                        </h2>
+                                                        <p class="blog-item__desc">
+                                                            Explore effective techniques and actionable tips designed to
+                                                            help students achieve their academic goals and thrive in
+                                                            their educational pursuits.
+                                                        </p>
+                                                        <div class="blog-item__bottom">
+                                                            <span class="blog-item__date">03 January 2024</span>
+                                                            <span class="blog-item__time">5 mins read</span>
+                                                            <span class="blog-item__branch">Productivity</span>
+                                                        </div>
+                                                    </div>
+                                                    <img
+                                                        src="./assets/img/blog/item-3.png"
+                                                        alt=""
+                                                        class="blog-item__thumb"
+                                                    />
+                                                </article>
+
+                                                <div class="blog__separate"></div>
+
+                                                <!-- Blog item 4 -->
+                                                <article class="blog-item">
+                                                    <div class="blog-item__left">
+                                                        <h2 class="blog-item__title">
+                                                            Find right learning way to your course online
+                                                        </h2>
+                                                        <p class="blog-item__desc">
+                                                            Navigate the diverse options for online courses to identify
+                                                            the most suitable learning methods and platforms that align
+                                                            with your personal and professional needs.
+                                                        </p>
+                                                        <div class="blog-item__bottom">
+                                                            <span class="blog-item__date">19 February 2023</span>
+                                                            <span class="blog-item__time">7 mins read</span>
+                                                            <span class="blog-item__branch">Design</span>
+                                                        </div>
+                                                    </div>
+                                                    <img
+                                                        src="./assets/img/blog/item-4.png"
+                                                        alt=""
+                                                        class="blog-item__thumb"
+                                                    />
+                                                </article>
+                                            </div>
+                                            <div class="blog__ctrl">
+                                                <button class="blog__ctrl-btn blog__ctrl-btn--active">1</button>
+                                                <button class="blog__ctrl-btn">...</button>
+                                                <button class="blog__ctrl-btn blog__ctrl-btn--next">
+                                                    <span>Next</span>
+                                                    <img src="./assets/icons/black-arrow-right.svg" alt="" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-xl-12">
+                                <div class="blog-info">
+                                    <h2 class="blog-info__heading">Popular Articles</h2>
+                                    <div class="blog-info__list">
+                                        <!-- Blog info item 1 -->
+                                        <div class="blog-info__item">
+                                            <div class="blog-info__item-title">
+                                                The great challenge of global learning
+                                            </div>
+                                            <div class="blog-info__item-bottom">
+                                                <span class="blog-info__item-date">26 Aug 2022</span>
+                                                <div class="blog-info__item-time">5 mins read</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog__separate blog__separate--short-margin"></div>
+
+                                        <!-- Blog info item 2 -->
+                                        <div class="blog-info__item">
+                                            <div class="blog-info__item-title">
+                                                How to building a career in data science
+                                            </div>
+                                            <div class="blog-info__item-bottom">
+                                                <span class="blog-info__item-date">23 July 2024</span>
+                                                <div class="blog-info__item-time">4 mins read</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog__separate blog__separate--short-margin"></div>
+
+                                        <!-- Blog info item 3 -->
+                                        <div class="blog-info__item">
+                                            <div class="blog-info__item-title">
+                                                We highlighting strategies for student success
+                                            </div>
+                                            <div class="blog-info__item-bottom">
+                                                <span class="blog-info__item-date">03 January 202</span>
+                                                <div class="blog-info__item-time">5 mins read</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog__separate blog__separate--short-margin"></div>
+                                    </div>
+                                    <form action="./index.html" class="form blog__form">
+                                        <h2 class="blog__form-heading">Subscribe to our Blog</h2>
+                                        <p class="blog__form-desc">Get the latest news to your email</p>
+                                        <input
+                                            type="email"
+                                            class="blog__form-input"
+                                            required
+                                            placeholder="Enter your email"
+                                        />
+                                        <button type="submit" class="btn btn--primary btn--rounded blog__form-btn">
+                                            Subscribe
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <section class="subscribe">
+                <div class="container">
+                    <div class="subscribe__inner">
+                        <div class="section__top">
+                            <h2 class="subscribe__heading">Subscribe Newsletters</h2>
+                            <p class="subscribe__desc">Enter your email address to register to our newsletter</p>
+                        </div>
+                        <form class="form subscribe__form">
+                            <div class="form__group subscribe__form-group">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form__input subscribe__form-input"
+                                    placeholder="Your email"
+                                    required
+                                />
+                                <button class="btn btn--primary btn--rounded subscribe__form-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="subscribe__decore">
+                            <img src="./assets/img/subscribe/decore-01.svg" alt="" />
+                            <img src="./assets/img/subscribe/decore-02.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>
