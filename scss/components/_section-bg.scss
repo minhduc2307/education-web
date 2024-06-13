@@ -1,0 +1,31 @@
+@use "../abstracts";
+
+.section {
+    &__bg {
+        position: relative;
+        background: #0975de;
+        height: 386px;
+        z-index: -1;
+        overflow: hidden;
+
+        &-decore {
+            & > img {
+                position: absolute;
+            }
+
+            & > img:nth-child(1) {
+                top: 40px;
+                right: 195px;
+            }
+
+            & > img:nth-child(2) {
+                bottom: 0;
+                right: 0;
+
+                @include abstracts.screen(xl) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -92,4 +92,50 @@
             color: #0071dc;
         }
     }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 86px;
+        padding-top: 60px;
+        border-top: 1px solid #e6e5e5;
+
+        @include abstracts.screen(lg) {
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-left {
+            display: flex;
+            gap: 16px;
+        }
+
+        &-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 180%;
+        }
+    }
+
+    &-socials {
+        display: flex;
+
+        gap: 10px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 4px;
+        }
+    }
 }
