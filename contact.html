@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+
+        <main class="contact-page">
+            <div class="section__bg contact__bg">
+                <div class="section__bg-decore">
+                    <img src="./assets/img/decore/decore-01.svg" alt="" />
+                    <img src="./assets/img/decore/decore-02.svg" alt="" />
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="contact__body">
+                    <h1 class="contact__heading">Contact Us</h1>
+                    <div class="contact__content">
+                        <div class="section__top">
+                            <h2 class="contact__sub-heading">Contact</h2>
+                            <p class="contact__desc">Need help or have a suggestion? Let us know.</p>
+                        </div>
+                        <form action="" class="reply__form contact__form">
+                            <div class="reply__form-row">
+                                <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="reply__form-input"
+                                    placeholder="Name"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    class="reply__form-input"
+                                    placeholder="Email"
+                                    required
+                                />
+                            </div>
+                            <textarea
+                                name=""
+                                id=""
+                                class="reply__form-text-area contact__form-text-area"
+                                placeholder="Type your message"
+                            ></textarea>
+                            <button type="submit" class="btn btn--primary reply__form-submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <section class="subscribe">
+                <div class="container">
+                    <div class="subscribe__inner">
+                        <div class="section__top">
+                            <h2 class="subscribe__heading">Subscribe Newsletters</h2>
+                            <p class="subscribe__desc">Enter your email address to register to our newsletter</p>
+                        </div>
+                        <form class="form subscribe__form">
+                            <div class="form__group subscribe__form-group">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form__input subscribe__form-input"
+                                    placeholder="Your email"
+                                    required
+                                />
+                                <button class="btn btn--primary btn--rounded subscribe__form-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="subscribe__decore">
+                            <img src="./assets/img/subscribe/decore-01.svg" alt="" />
+                            <img src="./assets/img/subscribe/decore-02.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>
