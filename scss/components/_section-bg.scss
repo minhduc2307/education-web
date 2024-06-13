@@ -8,6 +8,11 @@
         z-index: -1;
         overflow: hidden;
 
+        @include abstracts.screen(sm) {
+            height: auto;
+            padding-bottom: 30px;
+        }
+
         &-decore {
             & > img {
                 position: absolute;

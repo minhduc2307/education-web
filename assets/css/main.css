@@ -1657,6 +1657,12 @@ textarea {
   z-index: -1;
   overflow: hidden;
 }
+@media (max-width: 575.98px) {
+  .section__bg {
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
 .section__bg-decore > img {
   position: absolute;
 }
@@ -3459,9 +3465,20 @@ textarea {
   gap: 137px;
   margin-top: 54px;
 }
+@media (max-width: 991.98px) {
+  .about-stats__list {
+    gap: 110px;
+  }
+}
 @media (max-width: 767.98px) {
   .about-stats__list {
     margin-top: 30px;
+    gap: 100px;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-stats__list {
+    gap: 70px;
   }
 }
 .about-stats__item-num {
@@ -3470,12 +3487,23 @@ textarea {
   line-height: 150%;
   color: #0166ff;
 }
+@media (max-width: 991.98px) {
+  .about-stats__item-num {
+    font-size: 3rem;
+  }
+}
 .about-stats__item-text {
   display: block;
   margin-top: 9px;
   font-size: 2rem;
   font-weight: 600;
   line-height: 150%;
+}
+@media (max-width: 991.98px) {
+  .about-stats__item-text {
+    font-size: 1.7rem;
+    white-space: nowrap;
+  }
 }
 .about-goal__inner {
   padding: 50px 0;
@@ -3491,6 +3519,11 @@ textarea {
   grid-auto-rows: 215px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+@media (max-width: 575.98px) {
+  .about-goal__img-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .about-goal__img {
   width: 100%;
   height: 100%;
@@ -3500,11 +3533,18 @@ textarea {
 .about-goal__img--tall {
   grid-row: span 2;
 }
-.about-goal__img--small {
-  grid-column: span 1.5;
+@media (max-width: 575.98px) {
+  .about-goal__img--tall {
+    grid-row: initial;
+  }
 }
 .about-goal__img--wide {
   grid-column: span 2;
+}
+@media (max-width: 575.98px) {
+  .about-goal__img--wide {
+    grid-column: initial;
+  }
 }
 .about-teacher {
   background: #f3f7f4;
