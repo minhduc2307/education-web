@@ -16,6 +16,10 @@
             & > img:nth-child(1) {
                 top: 40px;
                 right: 195px;
+
+                @include abstracts.screen(md) {
+                    right: 20px;
+                }
             }
 
             & > img:nth-child(2) {
