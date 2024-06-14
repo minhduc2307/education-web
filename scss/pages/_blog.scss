@@ -1,6 +1,10 @@
 @use "../abstracts";
 
 .blog {
+    &-bg {
+        height: 386px;
+    }
+
     &__body {
         margin-top: -328px;
     }

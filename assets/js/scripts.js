@@ -90,32 +90,6 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
-// window.addEventListener("template-loaded", () => {
-//     const peopleList = document.querySelector(".people__list");
-//     const peopleItems = document.querySelectorAll(".people-item");
-//     const prevSliderButton = document.querySelector(".people__ctrl-btn--prev");
-//     const nextSliderButton = document.querySelector(".people__ctrl-btn--next");
-//     const peopleItemWidth = peopleItems[0].offsetWidth;
-//     const totalPeopleItems = peopleItems.length;
-//     let currentIndex = 0;
-
-//     const showItem = (itemList, currentIndex, itemWidth) => {
-//         itemList.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-//     };
-
-//     prevSliderButton.onclick = () => {
-//         currentIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : totalPeopleItems - 1;
-//         showItem(peopleList, currentIndex, peopleItemWidth);
-//     };
-
-//     nextSliderButton.onclick = () => {
-//         currentIndex = currentIndex + 1 < totalPeopleItems ? currentIndex + 1 : 0;
-//         showItem(peopleList, currentIndex, peopleItemWidth);
-//     };
-
-//     showItem(peopleList, currentIndex, peopleItemWidth);
-// });
-
 window.addEventListener("template-loaded", () => {
     const peopleList = document.querySelector(".people__list");
     const peopleItems = document.querySelectorAll(".people-item");
@@ -167,5 +141,27 @@ window.addEventListener("DOMContentLoaded", () => {
             authContent.classList.remove("show");
             authContent.classList.add("hide");
         }
+    });
+});
+
+window.addEventListener("template-loaded", () => {
+    const tabsSelector = "course-tab__item";
+    const contentsSelector = "course-tab__content";
+
+    const tabActive = `${tabsSelector}--current`;
+    const contentActive = `${contentsSelector}--current`;
+
+    const tabContainers = $$(".js-tabs");
+    tabContainers.forEach((tabContainer) => {
+        const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
+        const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
+        tabs.forEach((tab, index) => {
+            tab.onclick = () => {
+                tabContainer.querySelector(`.${tabActive}`)?.classList.remove(tabActive);
+                tabContainer.querySelector(`.${contentActive}`)?.classList.remove(contentActive);
+                tab.classList.add(tabActive);
+                contents[index].classList.add(contentActive);
+            };
+        });
     });
 });

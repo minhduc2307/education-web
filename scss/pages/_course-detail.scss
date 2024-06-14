@@ -204,6 +204,10 @@
         line-height: 150%;
         letter-spacing: -0.08rem;
 
+        @include abstracts.screen(md) {
+            font-size: 2.8rem;
+        }
+
         &--thin {
             margin-top: 60px;
             font-weight: 500;
@@ -229,6 +233,10 @@
         gap: 40px;
         width: 72%;
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            width: 86%;
+        }
     }
 
     &__learning-item {
@@ -244,6 +252,259 @@
         &__text {
             font-size: 1.2rem;
             line-height: 150%;
+        }
+    }
+
+    &__curriculum {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 30px;
+            margin-bottom: 67px;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 6px 6px 60px -6px rgba(45, 45, 45, 0.08);
+        }
+
+        &-item {
+            &__heading {
+                color: #010101;
+                font-size: 2rem;
+                font-weight: 500;
+                line-height: 120%;
+                letter-spacing: -0.04rem;
+            }
+        }
+
+        &-row {
+            display: flex;
+            margin-top: 20px;
+
+            @include abstracts.screen(sm) {
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 30px;
+            }
+        }
+
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+
+            @include abstracts.screen(sm) {
+                margin-left: 0;
+                gap: 16px;
+            }
+        }
+
+        &-icon {
+            width: 11.2px;
+            height: 14px;
+        }
+
+        &-time {
+            padding: 3px 18px;
+            color: #010101;
+            font-size: 1.2rem;
+            line-height: 166.667%;
+            border-radius: 3px;
+            border: 1px solid #f3f3f3;
+
+            @include abstracts.screen(sm) {
+                padding: 6px 8px;
+            }
+        }
+
+        &-btn {
+            --btn-width: 78px;
+            --btn-height: 26px;
+            padding: 0 8px;
+            font-size: 1.2rem;
+            font-weight: 400;
+
+            @include abstracts.screen(sm) {
+                --btn-height: 34px;
+            }
+        }
+    }
+
+    &__review {
+        padding: 30px;
+        margin-bottom: 67px;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 6px 6px 60px -6px rgba(45, 45, 45, 0.08);
+
+        &-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &-title {
+                color: #010101;
+                font-size: 7.8rem;
+                font-weight: 600;
+                line-height: 148.718%;
+
+                @include abstracts.screen(lg) {
+                    font-size: 4rem;
+                }
+
+                @include abstracts.screen(md) {
+                    font-size: 3rem;
+                }
+
+                @include abstracts.screen(sm) {
+                    font-size: 2.6rem;
+                }
+            }
+
+            &-text {
+                color: #70769c;
+                font-size: 2rem;
+                font-weight: 500;
+                line-height: 150%;
+
+                @include abstracts.screen(sm) {
+                    font-size: 1.5rem;
+                    white-space: nowrap;
+                }
+            }
+
+            &-stats {
+                margin-top: 37px;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+
+                    &:nth-child(1) .course-detail__review-rating-stats-loading {
+                        width: 80%;
+                        background: #76db98;
+                    }
+
+                    &:nth-child(2) .course-detail__review-rating-stats-loading {
+                        width: 15%;
+                        background: #b7ea83;
+                    }
+
+                    &:nth-child(3) .course-detail__review-rating-stats-loading {
+                        width: 5.5%;
+                        background: #f6d757;
+                    }
+
+                    &:nth-child(4) .course-detail__review-rating-stats-loading {
+                        width: 3.64%;
+                        background: #fbb851;
+                    }
+
+                    &:nth-child(5) .course-detail__review-rating-stats-loading {
+                        width: 12.28%;
+                        background: #f17a54;
+                    }
+                }
+
+                &-num {
+                    color: #70769c;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 187.5%;
+                }
+
+                &-percent {
+                    margin-right: 30px;
+                    width: 40px;
+                    color: #1a2151;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 187.5%;
+                }
+
+                &-skeleton {
+                    flex-shrink: 0;
+                    width: 60%;
+                    height: 24px;
+                    margin: 0 17px 0 13px;
+                    border-radius: 6px;
+                    background: #f2f2f8;
+                }
+
+                &-loading {
+                    height: 100%;
+                    border-radius: inherit;
+                }
+            }
+        }
+
+        &-heading {
+            margin-top: 46px;
+            color: #010101;
+            font-size: 3.4rem;
+            font-weight: 500;
+            line-height: 152.941%;
+        }
+
+        &-list {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &-item {
+            padding: 20px 20px 14px 33px;
+            border-radius: 6px;
+            background: #f6f8fb;
+
+            &__row {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            &__avatar {
+                width: 62px;
+                height: 62px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            &__name {
+                margin-bottom: 6px;
+                color: #0166ff;
+                font-size: 2rem;
+                font-weight: 500;
+                line-height: 150%;
+            }
+
+            &__comment {
+                margin-top: 6px;
+                color: #010101;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 187.5%;
+            }
+
+            &__desc {
+                margin-top: 4px;
+                text-align: right;
+                color: #010101;
+                font-size: 1.3rem;
+                line-height: 184.615%;
+
+                @include abstracts.screen(sm) {
+                    text-align: left;
+                }
+            }
         }
     }
 }
@@ -281,6 +542,7 @@
             color: #010101;
             background: #ebebeb;
             border-radius: 20px;
+            user-select: none;
 
             &--current {
                 border-radius: 20px;
@@ -288,8 +550,16 @@
                 color: #fff;
             }
 
-            &:not(&--current) {
+            &:hover:not(&--current) {
                 cursor: pointer;
+            }
+        }
+
+        &__content {
+            display: none;
+
+            &--current {
+                display: block;
             }
         }
     }

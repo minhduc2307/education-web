@@ -3096,6 +3096,9 @@ textarea {
   margin-top: 30px;
 }
 
+.blog-bg {
+  height: 386px;
+}
 .blog__body {
   margin-top: -328px;
 }
@@ -4157,6 +4160,11 @@ textarea {
   line-height: 150%;
   letter-spacing: -0.08rem;
 }
+@media (max-width: 767.98px) {
+  .course-detail__title {
+    font-size: 2.8rem;
+  }
+}
 .course-detail__title--thin {
   margin-top: 60px;
   font-weight: 500;
@@ -4179,6 +4187,11 @@ textarea {
   width: 72%;
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .course-detail__learning-list {
+    width: 86%;
+  }
+}
 .course-detail__learning-item {
   display: flex;
   gap: 10px;
@@ -4191,6 +4204,233 @@ textarea {
 .course-detail__learning-item__text {
   font-size: 1.2rem;
   line-height: 150%;
+}
+.course-detail__curriculum-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  margin-bottom: 67px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 6px 6px 60px -6px rgba(45, 45, 45, 0.08);
+}
+.course-detail__curriculum-item__heading {
+  color: #010101;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.04rem;
+}
+.course-detail__curriculum-row {
+  display: flex;
+  margin-top: 20px;
+}
+@media (max-width: 575.98px) {
+  .course-detail__curriculum-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+  }
+}
+.course-detail__curriculum-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.course-detail__curriculum-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+@media (max-width: 575.98px) {
+  .course-detail__curriculum-right {
+    margin-left: 0;
+    gap: 16px;
+  }
+}
+.course-detail__curriculum-icon {
+  width: 11.2px;
+  height: 14px;
+}
+.course-detail__curriculum-time {
+  padding: 3px 18px;
+  color: #010101;
+  font-size: 1.2rem;
+  line-height: 166.667%;
+  border-radius: 3px;
+  border: 1px solid #f3f3f3;
+}
+@media (max-width: 575.98px) {
+  .course-detail__curriculum-time {
+    padding: 6px 8px;
+  }
+}
+.course-detail__curriculum-btn {
+  --btn-width: 78px;
+  --btn-height: 26px;
+  padding: 0 8px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+@media (max-width: 575.98px) {
+  .course-detail__curriculum-btn {
+    --btn-height: 34px;
+  }
+}
+.course-detail__review {
+  padding: 30px;
+  margin-bottom: 67px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 6px 6px 60px -6px rgba(45, 45, 45, 0.08);
+}
+.course-detail__review-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.course-detail__review-rating-title {
+  color: #010101;
+  font-size: 7.8rem;
+  font-weight: 600;
+  line-height: 148.718%;
+}
+@media (max-width: 991.98px) {
+  .course-detail__review-rating-title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .course-detail__review-rating-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .course-detail__review-rating-title {
+    font-size: 2.6rem;
+  }
+}
+.course-detail__review-rating-text {
+  color: #70769c;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+@media (max-width: 575.98px) {
+  .course-detail__review-rating-text {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+}
+.course-detail__review-rating-stats {
+  margin-top: 37px;
+}
+.course-detail__review-rating-stats-item {
+  display: flex;
+  align-items: center;
+}
+.course-detail__review-rating-stats-item:nth-child(1) .course-detail__review-rating-stats-loading {
+  width: 80%;
+  background: #76db98;
+}
+.course-detail__review-rating-stats-item:nth-child(2) .course-detail__review-rating-stats-loading {
+  width: 15%;
+  background: #b7ea83;
+}
+.course-detail__review-rating-stats-item:nth-child(3) .course-detail__review-rating-stats-loading {
+  width: 5.5%;
+  background: #f6d757;
+}
+.course-detail__review-rating-stats-item:nth-child(4) .course-detail__review-rating-stats-loading {
+  width: 3.64%;
+  background: #fbb851;
+}
+.course-detail__review-rating-stats-item:nth-child(5) .course-detail__review-rating-stats-loading {
+  width: 12.28%;
+  background: #f17a54;
+}
+.course-detail__review-rating-stats-num {
+  color: #70769c;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 187.5%;
+}
+.course-detail__review-rating-stats-percent {
+  margin-right: 30px;
+  width: 40px;
+  color: #1a2151;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 187.5%;
+}
+.course-detail__review-rating-stats-skeleton {
+  flex-shrink: 0;
+  width: 60%;
+  height: 24px;
+  margin: 0 17px 0 13px;
+  border-radius: 6px;
+  background: #f2f2f8;
+}
+.course-detail__review-rating-stats-loading {
+  height: 100%;
+  border-radius: inherit;
+}
+.course-detail__review-heading {
+  margin-top: 46px;
+  color: #010101;
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 152.941%;
+}
+.course-detail__review-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.course-detail__review-item {
+  padding: 20px 20px 14px 33px;
+  border-radius: 6px;
+  background: #f6f8fb;
+}
+.course-detail__review-item__row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.course-detail__review-item__avatar {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.course-detail__review-item__name {
+  margin-bottom: 6px;
+  color: #0166ff;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.course-detail__review-item__comment {
+  margin-top: 6px;
+  color: #010101;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 187.5%;
+}
+.course-detail__review-item__desc {
+  margin-top: 4px;
+  text-align: right;
+  color: #010101;
+  font-size: 1.3rem;
+  line-height: 184.615%;
+}
+@media (max-width: 575.98px) {
+  .course-detail__review-item__desc {
+    text-align: left;
+  }
 }
 
 .course__content {
@@ -4224,14 +4464,21 @@ textarea {
   color: #010101;
   background: #ebebeb;
   border-radius: 20px;
+  user-select: none;
 }
 .course-tab__item--current {
   border-radius: 20px;
   background: #267bfc;
   color: #fff;
 }
-.course-tab__item:not(.course-tab__item--current) {
+.course-tab__item:hover:not(.course-tab__item--current) {
   cursor: pointer;
+}
+.course-tab__content {
+  display: none;
+}
+.course-tab__content--current {
+  display: block;
 }
 .course-content {
   margin-top: 50px;
