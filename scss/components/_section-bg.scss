@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 .section {
-    &__bg {
+    &-bg {
         position: relative;
         background: #0975de;
         height: 386px;
@@ -13,7 +13,7 @@
             padding-bottom: 30px;
         }
 
-        &-decore {
+        &__decore {
             & > img {
                 position: absolute;
             }
@@ -35,6 +35,40 @@
                     display: none;
                 }
             }
+        }
+
+        &__label {
+            margin-top: 68px;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 150%;
+            color: #ffd05a;
+        }
+
+        &__sub-heading {
+            width: min(836px, 100%);
+            margin-top: 10px;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 150%;
+            color: #fff;
+
+            @include abstracts.screen(lg) {
+                font-size: 3rem;
+            }
+
+            @include abstracts.screen(md) {
+                font-size: 2.8rem;
+            }
+        }
+
+        &__desc {
+            width: min(828px, 100%);
+            margin-top: 20px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+            color: #fff;
         }
     }
 }

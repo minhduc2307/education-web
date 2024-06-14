@@ -1,4 +1,7 @@
 .courses-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 16px;
     border-radius: 14px;
     border: 1px solid #f2f2f2;
@@ -22,6 +25,7 @@
 
     &__title {
         margin-top: 22px;
+        margin-bottom: 17px;
         color: #292c3f;
         font-size: 1.6rem;
         font-weight: 600;
@@ -29,7 +33,8 @@
     }
 
     &__bottom {
-        margin-top: 17px;
+        // margin-top: 17px;
+        margin-top: auto;
         display: flex;
         align-items: center;
     }

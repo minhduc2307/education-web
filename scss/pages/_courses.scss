@@ -1,0 +1,19 @@
+.courses {
+    &-page {
+        &__bg {
+            height: 337px;
+        }
+
+        &__inner {
+            padding-bottom: 100px;
+        }
+    }
+
+    &__heading {
+        margin: 10px auto 0;
+    }
+
+    &__desc {
+        margin: 20px auto 0;
+    }
+}
