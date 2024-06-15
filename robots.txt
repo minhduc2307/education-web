@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /sign-in.html
+Disallow: /sign-up.html
+Disallow: /forgot-password.html
+Disallow: /reset-password-emailed.html
+
+Sitemap: https://minhduc2307.github.io/education-web/sitemap.xml
